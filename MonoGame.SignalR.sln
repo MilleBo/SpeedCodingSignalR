@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.SignalR", "MonoGame.SignalR\MonoGame.SignalR.csproj", "{E2709569-C477-44CF-9637-21BF069A5C08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2709569-C477-44CF-9637-21BF069A5C08}.Debug|x86.ActiveCfg = Debug|x86
+		{E2709569-C477-44CF-9637-21BF069A5C08}.Debug|x86.Build.0 = Debug|x86
+		{E2709569-C477-44CF-9637-21BF069A5C08}.Release|x86.ActiveCfg = Release|x86
+		{E2709569-C477-44CF-9637-21BF069A5C08}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CDC00FD-F975-477A-9119-5A77C171E25A}
+	EndGlobalSection
+EndGlobal
