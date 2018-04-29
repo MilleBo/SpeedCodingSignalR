@@ -11,6 +11,7 @@ namespace MonoGame.SignalR
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private CharacterMoveTest _characterMoveTest;
 
         public Game1()
         {
@@ -26,8 +27,8 @@ namespace MonoGame.SignalR
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
+            _characterMoveTest = new CharacterMoveTest();
+            _characterMoveTest.Connect();
             base.Initialize();
         }
 
@@ -39,6 +40,7 @@ namespace MonoGame.SignalR
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            _characterMoveTest.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -62,7 +64,7 @@ namespace MonoGame.SignalR
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            _characterMoveTest.Update();
 
             base.Update(gameTime);
         }
@@ -75,7 +77,9 @@ namespace MonoGame.SignalR
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            _characterMoveTest.Draw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
